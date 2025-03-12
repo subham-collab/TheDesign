@@ -1,0 +1,199 @@
+body {
+    background-image: linear-gradient(to right, #2c3a43, #2d475a, #2f5472, #33618b, #3d6da4, #3d6da4, #3d6da4, #3d6da4, #33618b, #2f5472, #2d475a, #2c3a43);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background color:#e5533d;
+    text-align: center;
+}
+
+nav {
+    /* background: */
+    /* background-color: oklch(85% 0.2 200); /* Soft blue using OKLCH */
+    /* color: oklch(30% 0.1 20); Dark text */ 
+    background-image: linear-gradient(to right top, #d5e397, #9bd19f, #70bba7, #5ca2a6, #5c8798, #5c8798, #5c8798, #5c8798, #5ca2a6, #70bba7, #9bd19f, #d5e397);
+    padding: 10px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #ff6347;
+}
+
+section {
+    padding: 100px 20px;
+    margin-top: 60px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.8s, transform 0.8s;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.transition-btn {
+    padding: 10px 20px;
+    border: none;
+    background: #ff6347;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.transition-btn:hover {
+    background: #e5533d;
+}
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+ul li {
+    display: inline-block;
+    margin: 10px;
+    animation: slideIn 0.5s ease-in-out forwards;
+    opacity: 0;
+}
+
+/* Delay animation for each item */
+ul li:nth-child(1) { animation-delay: 0.2s; }
+ul li:nth-child(2) { animation-delay: 0.4s; }
+ul li:nth-child(3) { animation-delay: 0.6s; }
+ul li:nth-child(4) { animation-delay: 0.8s; }
+#img {
+    width: 300px;
+    height: auto;
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+#img:hover {
+    box-shadow: 0 10px 50px rgba(255, 0, 0, 0.8); 
+}
+#text{
+ font-size:30px;
+}
+#container {
+    display: flex;
+    align-items: center; 
+    justify-content: flex-start; 
+    gap: 10px; 
+    padding-left:90%;
+    padding-top:20px;
+}
+
+#container img {
+    width: 30px;
+    height: 30px;
+}
+#imga{
+    width: auto;
+    height: 200px;
+    transition: box-shadow 0.3s ease-in-out;
+}
+#imga:hover{
+    box-shadow: 0 10px 50px rgba(255, 0, 0, 0.8); 
+}
+#form{
+    display: flex;
+    align-items: justify; 
+    justify-content: flex-start; 
+    gap: 10px; 
+    padding-left:28%;
+    padding-bottom:20px;
+}
+.open-btn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Hidden form box */
+.form-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.8); /* Shrinks on start */
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* When form is active */
+.form-box.active {
+    display: block;
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+}
+
+/* Input field styling */
+.form-box input {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    display: block;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Submit and Close button */
+.submit-btn, .close-btn {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.submit-btn {
+    background-color: #2ecc71;
+    color: white;
+}
+
+.close-btn {
+    background-color: red;
+    color: white;
+}
+</style>
+
